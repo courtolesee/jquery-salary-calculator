@@ -1,0 +1,26 @@
+body {
+
+}
+
+header {
+    background-color: gray;
+    color: white;
+    padding: 1.5%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.formGroup {
+    width: 100%;
+    border: black;
+    color: gray;
+    margin-bottom: 2%;
+}
+
+h2 {
+    margin-bottom: 2%;
+}
+
+.submitEmployee {
+    float: right;
+}

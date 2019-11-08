@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Salary Calculator</title>
+    <script src="jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="salaryCalc.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Salary Calculator</h1></header>
+    <h2>Add Employee
+        <form>
+            <div class="formGroup">
+                <input type="text" id="inFirstName" placeholder="First Name"/>
+                <input type="text" id="inLastName" placeholder="Last Name"/>
+                <input type="number" id="inId" placeholder="ID"/>
+                <input type="text" id="inTitle" placeholder="Title"/>
+                <input type="number" id="inSalary" placeholder="Annual Salary"/>
+            </div>
+            <div>
+                <button id="addEmployee" type="submit" class="submitEmployee">Submit</button>
+            </div>
+        </form>
+    </h2>
+    <h2>Employees
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Annual Salary</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                    <tr>
+                    <!-- jQuery will fill this in  -->
+                    </tr>
+                </tbody>
+        </table>
+    </h2>
+    <h2>
+        <div>
+            <label>Total Monthly: $</label>
+            <span id="monthlyBudget">0</span>
+        </div>
+    </h2>
+</body>
+</html>
