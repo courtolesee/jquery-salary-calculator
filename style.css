@@ -1,5 +1,5 @@
 body {
-
+    padding: 3em;
 }
 
 header {
@@ -11,13 +11,14 @@ header {
 }
 
 .formGroup {
-    width: 100%;
+    width: 90%;
     border: black;
     color: gray;
     margin-bottom: 2%;
 }
 
 h2 {
+    margin-top: 2%;
     margin-bottom: 2%;
 }
 
