@@ -1,5 +1,6 @@
 body {
     padding: 3em;
+    background-color: rgb(223, 231, 223);
 }
 
 header {
@@ -17,7 +18,8 @@ header {
 
 .first, .last, .id, .title, .salary {
     width: 8em;
-    outline-color: black;
+    border-style: solid;
+    border-color: rgb(37, 41, 37);    
 }
 
 h2 {
@@ -33,6 +35,10 @@ h2 {
     border-radius: 10px;
     border: 2px solid black;
     justify-content: center;
+}
+
+.submitEmployee:hover {
+    background-color: rgb(117, 112, 112);
 }
 
 thead, tbody, th, td, tr, table {

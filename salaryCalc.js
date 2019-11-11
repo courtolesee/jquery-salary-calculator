@@ -1,7 +1,6 @@
 //still need: 
-//calc monthly costs and append DOM
+//append monthly cost to DOM
 //if exceeds $20,000, red background color to monthly costs
-//css stuff! 
 
 //------------------------------------------------------------------------------
 
