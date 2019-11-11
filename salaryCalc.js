@@ -1,6 +1,9 @@
 //still need: 
-//append monthly cost to DOM
+//calc monthly costs and append DOM
 //if exceeds $20,000, red background color to monthly costs
+//css stuff! 
+
+//TOTAL YEARLY IS DOUBLE ADDING!
 
 //------------------------------------------------------------------------------
 
@@ -15,7 +18,6 @@ $('#tableBody').on('click', '.delete', removeEmployee);
 const employee = [];
 const salaries = [];
 let totalYearly = 0;
-let monthlyBudget = totalYearly / 12; 
 
 
 function addEmployee () {
@@ -73,23 +75,33 @@ function createSalariesVar (){
     event.preventDefault();
     let individualSalary = $('#inSalary').val();
     salaries.push(individualSalary)
-    console.log('individual salary', individualSalary);   
 }
 
 function calculateMonthly (){
+    event.preventDefault();
 // create totalYearly and calculate monthly from that
     for (let index = 0; index < salaries.length; index++) {
         totalYearly += Number(salaries[index]);
     }
-    console.log('total yearly:', totalYearly);
+    let monthlyBudget = totalYearly / 12; 
+    let monthlyBudgetFixed = monthlyBudget.toFixed(2)
     let el = $('#monthlyBudget');
     el.empty();
-    el.append('<span>${#monthlyBudget}</span>');
+    el.append(monthlyBudgetFixed);
 }  
 
 
+$("div.totalMonthly").each(function(){
+    $(this).html() >= 20000 ? $(this).css('color', 'red') : null;
+}
+);
 
-// $("div.totalMonthly").each(function(){
-//     $this.html() >= 20000 ? $(this).css('color', 'red') : null;
-// }
-// );
+
+// I initially did a loop to find the total salary of all 
+// employees (and used the Number function to turn it into a number), 
+// then created a variable called monthlySalary and set that equal to 
+// totalSalary / 12, then made a variable called monthlySalaryFixed and 
+// set that equal to monthlySalary.toFixed(2).from here it worked for 
+// me to display it on the bottom with two decimals
+
+
