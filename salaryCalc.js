@@ -1,12 +1,4 @@
-
-// A 'Submit' button should collect the form information, store the information to 
-// calculate monthly costs, append information to the DOM and clear the input fields. 
-// Using the stored information, calculate monthly costs and append this to the to 
-// DOM. If the total monthly cost exceeds $20,000, add a red background color to the 
-// total monthly cost.
-
 //still need: 
-//store info to calculate montly costs
 //calc monthly costs and append DOM
 //if exceeds $20,000, red background color to monthly costs
 //css stuff! 
@@ -22,7 +14,10 @@ $('#tableBody').on('click', '.delete', removeEmployee);
 } 
 
 const employee = [];
-let salaries = [];
+const salaries = [];
+let totalYearly = 0;
+let monthlyBudget = totalYearly / 12; 
+
 
 function addEmployee () {
 // get values from all inputs and put into employee array
@@ -42,7 +37,7 @@ function addEmployee () {
 // calling functions  
   employeeDOM(employee);
   createSalariesVar();
-  calcMonthly();
+  calculateMonthly();
 // empty and refocus cursor to beginning of inputs
   $('#inFirstName').val('');
   $('#inLastName').val('');
@@ -79,15 +74,23 @@ function createSalariesVar (){
     event.preventDefault();
     let individualSalary = $('#inSalary').val();
     salaries.push(individualSalary)
+    console.log('individual salary', individualSalary);   
 }
-// *****TO DO: calculate monthly cost 
 
-function calcMonthly (){
-    let totalMonthly = salaries / 12;
+function calculateMonthly (){
+// create totalYearly and calculate monthly from that
     for (let index = 0; index < salaries.length; index++) {
-        totalMonthly += Number(salaries[index].individualSalary);
+        totalYearly += Number(salaries[index]);
     }
-    console.log('total monthly:', totalMonthly);
+    console.log('total yearly:', totalYearly);
+    let el = $('#monthlyBudget');
+    el.empty();
+    el.append('<span>${#monthlyBudget}</span>');
 }  
 
 
+
+// $("div.totalMonthly").each(function(){
+//     $this.html() >= 20000 ? $(this).css('color', 'red') : null;
+// }
+// );

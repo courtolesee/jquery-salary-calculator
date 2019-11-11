@@ -14,21 +14,21 @@
     <header><h1>Salary Calculator</h1></header>
     <h2>Add Employee
         <form>
-            <div class="formGroup">
-                <input type="text" id="inFirstName" placeholder="First Name"/>
-                <input type="text" id="inLastName" placeholder="Last Name"/>
-                <input type="number" id="inId" placeholder="ID"/>
-                <input type="text" id="inTitle" placeholder="Title"/>
-                <input type="number" id="inSalary" placeholder="Annual Salary"/>
+            <div class="inputs">
+                <input class="first" type="text" id="inFirstName" placeholder="First Name"/>
+                <input class="last" type="text" id="inLastName" placeholder="Last Name"/>
+                <input class="id" type="number" id="inId" placeholder="ID"/>
+                <input class="title" type="text" id="inTitle" placeholder="Title"/>
+                <input class="salary" type="number" id="inSalary" placeholder="Annual Salary"/>
+                <button id="addEmployee" type="submit" class="submitEmployee">Submit</button>
             </div>
             <div>
-                <button id="addEmployee" type="submit" class="submitEmployee">Submit</button>
             </div>
         </form>
     </h2>
     <h2 class="tablestart">Employees
         <table class="table table-striped">
-            <thead>
+            <thead class='t1'>
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -46,7 +46,7 @@
         </table>
     </h2>
     <h2>
-        <div>
+        <div class="totalMonthly">
             <label>Total Monthly: $</label>
             <span id="monthlyBudget"></span>
         </div>

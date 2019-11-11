@@ -3,18 +3,21 @@ body {
 }
 
 header {
-    background-color: gray;
+    background-color: rgb(110, 144, 83);
     color: white;
     padding: 1.5%;
     text-align: center;
     margin-bottom: 2%;
 }
 
-.formGroup {
-    width: 90%;
-    border: black;
-    color: gray;
-    margin-bottom: 2%;
+.inputs {
+    margin-top: 1%;
+    display: flex;
+}
+
+.first, .last, .id, .title, .salary {
+    width: 8em;
+    outline-color: black;
 }
 
 h2 {
@@ -24,4 +27,20 @@ h2 {
 
 .submitEmployee {
     float: right;
+    width: 8em;
+    color: black;
+    background-color: rgb(185, 183, 183);
+    border-radius: 10px;
+    border: 2px solid black;
+    justify-content: center;
+}
+
+thead, tbody, th, td, tr, table {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid black; 
+}
+
+.totalMonthly {
+    text-align: right;
 }
