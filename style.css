@@ -52,5 +52,5 @@ thead, tbody, th, td, tr, table {
 }
 
 .makeRed {
-    background-color: red;
+    background-color: rgb(206, 71, 71);
 }
