@@ -48,7 +48,7 @@ for (let person of array){
     <td>${person.lastName}</td>
     <td>${person.ID}</td>
     <td>${person.title}</td>
-    <td>${person.salary}</td>
+    <td>$${person.salary}</td>
     <td><button class="delete">Delete</button></td>
     </tr>`);
     }
