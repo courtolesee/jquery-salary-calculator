@@ -1,12 +1,3 @@
-//still need: 
-//calc monthly costs and append DOM
-//if exceeds $20,000, red background color to monthly costs
-//css stuff! 
-
-//TOTAL YEARLY IS DOUBLE ADDING!
-
-//------------------------------------------------------------------------------
-
 $(document).ready(onReady);
 
 function onReady(){
@@ -88,20 +79,12 @@ function calculateMonthly (){
     let el = $('#monthlyBudget');
     el.empty();
     el.append(monthlyBudgetFixed);
-}  
+    changeToRed(monthlyBudgetFixed);
+    }
 
-
-$("div.totalMonthly").each(function(){
-    $(this).html() >= 20000 ? $(this).css('color', 'red') : null;
-}
-);
-
-
-// I initially did a loop to find the total salary of all 
-// employees (and used the Number function to turn it into a number), 
-// then created a variable called monthlySalary and set that equal to 
-// totalSalary / 12, then made a variable called monthlySalaryFixed and 
-// set that equal to monthlySalary.toFixed(2).from here it worked for 
-// me to display it on the bottom with two decimals
-
-
+    //change to red if over $20,000
+    function changeToRed(red){
+        if (red >= 20000){
+            $('#monthlyBudget').addClass('makeRed');
+        }
+    }

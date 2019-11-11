@@ -50,3 +50,7 @@ thead, tbody, th, td, tr, table {
 .totalMonthly {
     text-align: right;
 }
+
+.makeRed {
+    background-color: red;
+}
